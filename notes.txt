@@ -1,0 +1,12 @@
+composer create-project --prefer-dist laravel/laravel larticles
+
+php artisan make:migration create_articles_table --create=articles
+
+seeders and facories mae fake data for the database
+php artisan make:seeder ArticlesTableSeeder
+php artisan make:factory ArticleFactory
+
+php artisan make:model Article
+php artisan migrate
+
+php artisan make:controller ArticleController --resource
